@@ -8,7 +8,7 @@
 <title>Login</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body style="background-image:url('img/backimg.jpg')">
 <?php
 	require('db.php');
 	session_start();
@@ -26,7 +26,7 @@
 		$rows = mysqli_num_rows($result);
         if($rows==1){
 			$_SESSION['username'] = $username;
-			header("Location: dashboard.php"); // Redirect user to index.php
+			header("Location: index.php"); // Redirect user to index.php
             }else{
 				echo "<div class='form'><h3>Username/password is incorrect.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
 				}
@@ -41,9 +41,7 @@
 </form>
 <p>Not registered yet? <a href='registration.php'>Register Here</a></p>
 
-<br /><br />
-<a href="http://www.allphptricks.com/simple-user-registration-login-script-in-php-and-mysqli/">Tutorial Link</a> <br /><br />
-For More Web Development Tutorials Visit: <a href="http://www.allphptricks.com/">AllPHPTricks.com</a>
+
 </div>
 <?php } ?>
 

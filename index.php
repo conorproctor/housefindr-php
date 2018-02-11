@@ -8,6 +8,8 @@ include("auth.php"); //include auth.php file on all secure pages ?>
 <title>Welcome Home</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
+
+
 <body>
 <div class="form">
 <p>Welcome <?php echo $_SESSION['username']; ?>!</p>

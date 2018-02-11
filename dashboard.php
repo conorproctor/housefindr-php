@@ -17,7 +17,8 @@ include("auth.php"); //include auth.php file on all secure pages ?>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <style>
-    body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+    body,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+    h1{color:blue}
     body {font-size: 16px;}
     .w3-half img {margin-bottom: -6px;margin-top: 16px;opacity: 0.8;cursor: pointer}
     .w3-half img:hover {opacity: 1}
@@ -35,10 +36,14 @@ include("auth.php"); //include auth.php file on all secure pages ?>
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
 
         <div class="w3-bar-block">
-            <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-red"><i class="fa fa-home"></i>  Home</a>
-            <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-red"><i class="fa fa-picture-o"></i>  Gallery</a>
-            <a href="#choice" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-red"><i class="fa fa-question-circle"></i>  Why choose us?</a>
-            <a href="#swiping" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-red"><i class="fa fa-hand-pointer-o"></i>  Start swiping</a>
+            <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue"><i class="fa fa-home"></i>  Home</a>
+
+            <a href="#profile" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue"><i class="fa fa-user"></i>  Profile</a>
+
+            <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue"><i class="fa fa-picture-o"></i>  Gallery</a>
+            <a href="#choice" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue"><i class="fa fa-question-circle"></i>  Why choose us?</a>
+
+            <a href="#swiping" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue"><i class="fa fa-hand-pointer-o"></i>  Start swiping</a>
 
         </div>
     </nav>
@@ -57,9 +62,9 @@ include("auth.php"); //include auth.php file on all secure pages ?>
 
         <!-- Header -->
         <div class="w3-container" style="margin-top:80px" id="gallery">
-            <h1 class="w3-jumbo"><b>HouseFindr</b></h1>
+            <h1 class="w3-jumbo w3-text-blue"><b>HouseFindr</b></h1>
             <h4><b>Swipe to find your student accommodation or the perfect tenant</b></h4>
-            <h1 class="w3-xxxlarge w3-text-black"><b>Gallery</b></h1>
+            <h1 class="w3-xxxlarge w3-text-blue"><b>Gallery</b></h1>
         </div>
 
         <!-- Photo grid (modal) -->
@@ -87,9 +92,9 @@ include("auth.php"); //include auth.php file on all secure pages ?>
         </div>
 
 
-        <!-- Designers -->
+        <!-- what makes our app unique -->
         <div class="w3-container" id="choice" style="margin-top:75px">
-            <h1 class="w3-xxxlarge w3-text-black"><b>What makes our app unique?</b></h1>
+            <h1 class="w3-xxxlarge w3-text-blue"><b>What makes our app unique?</b></h1>
             <p>Are you a student/landlord who hates the hassle of sorting out accommodation for the academic year? </p>
             <p>Yes? Great! - Then look no further, this app has it all. </p>
             <p>For the students of colleges around Ireland, accommodation seems to be scarce. Some students are living in hostels, on couches or worse again, commuting for 2,3 or 4+ hours. This is not practical in the slightest & is very off-putting for first year students - first year students are effected the most and this app helps alleviate this problem for these students. </p>
@@ -98,11 +103,22 @@ include("auth.php"); //include auth.php file on all secure pages ?>
 
         <!-- Swiping -->
         <div class="w3-container" id="swiping" style="margin-top:75px">
+          <div class="w3-container" id="choice" style="margin-top:75px">
+              <h1 class="w3-xxxlarge w3-text-blue"><b>Get swiping!</b></h1>
+              <p>Start swiping today and find the house that best suits you! As shown below, you can see how you choose whether you like the house or not, it's as simple as that! </p>
+              <div class="w3-row-padding">
+                  <div class="w3-half">
+                      <img src="img\bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Luxurious, spacious rooms">
+                  </div>
+                  <div class="w3-half">
+                      <img src="img\house2.jpg" style="width:100%" onclick="onClick(this)" alt="Kick back and enjoy some Tv with your housemates">
+                  </div>
+              </div>
 
-            <a href="swiping.php">
-                <center><h1 class="w3-xxxlarge w3-text-black"><b>Start swiping <i class="fa fa-hand-pointer-o"></i></b></h1></center>
-            </a>
-
+              <a href="swiping.php">
+                    <center><h1 class="w3-xxxlarge w3-text-blue"><b>Start swiping <i class="fa fa-hand-pointer-o"></i></b></h1></center>
+                </a>
+          </div>
 
             <!-- End page content -->
         <div style="float:right">
